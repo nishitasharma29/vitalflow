@@ -2,4 +2,5 @@ flask
 Flask-MySQL
 mysql-connector-python
 gunicorn
+flask_mysqldb
 
