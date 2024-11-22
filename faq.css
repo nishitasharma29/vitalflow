@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #286e5d;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.faq h3 {
+    color: #be5e26;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.faq p {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}

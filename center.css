@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #286e5d;
+    text-align: center;
+    margin: 0; /* Remove any default margin */
+    padding-top: 10px;
+    margin-top: 40px;
+}
+
+h3 {
+    color:#286e5d;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    margin-right: 50px;
+    width: 150px;
+}
+
+
+
+button {
+    padding: 10px 15px;
+    background-color: #286e5d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px; /* Ensures consistent font size */
+    border-radius: 5px; /* Optional: Adds rounded corners for a consistent look */
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #1f5547;
+}
+
+
+button.clear-button {
+    background-color: #f44336; /* Red color for the Clear button */
+}
+
+button.clear-button:hover {
+    background-color: #c62828; /* Darker red for hover effect */
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 50%;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #286e5d;
+    color: white;
+}
+
+
+

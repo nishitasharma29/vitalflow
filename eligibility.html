@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Eligibility</title>
+    <link rel="stylesheet" href="eligibility.css">
+</head>
+<body>
+    <section class="content-section">
+        <h1>Blood Donation Eligibility Criteria</h1>
+        <h3>To donate blood, you must meet the following requirements:</h3>
+    
+        <table class="eligibility-table">
+            <thead>
+                <tr>
+                    <th>Criteria</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Age</td>
+                    <td>You must be between 18 and 65 years old.</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>You must weigh at least 50 kg.</td>
+                </tr>
+                <tr>
+                    <td>Health</td>
+                    <td>You should be in good health at the time of donation. Chronic illnesses or infections may disqualify you.</td>
+                </tr>
+                <tr>
+                    <td>Medications</td>
+                    <td>Some medications may disqualify you from donating. Check with the blood bank if you're on any medications.</td>
+                </tr>
+                <tr>
+                    <td>Recent Surgeries</td>
+                    <td>If you’ve had surgery recently, there may be a waiting period before you can donate.</td>
+                </tr>
+                <tr>
+                    <td>Pregnancy</td>
+                    <td>Pregnant women are not eligible to donate. You may need to wait a few months after childbirth.</td>
+                </tr>
+                <tr>
+                    <td>Tattoos and Piercings</td>
+                    <td>If you've had a tattoo or piercing in the last 6 months, you may not be eligible to donate.</td>
+                </tr>
+                <tr>
+                    <td>Travel History</td>
+                    <td>Recent travel to malaria-prone areas may affect your eligibility.</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <h3>If you meet these criteria and are in good health, consider donating blood to help save lives!</h3>
+    </section>
+    
+
+<!-- Form Section -->
+<div class="form-box">
+    <h2>Check Your Eligibility</h2>
+    <h4>Fill out the form below to check your eligibility to donate blood:</h4>
+    
+    <form id="eligibility-form">
+        <ul class="form-list">
+            <li>
+                <label for="age">Age (years):</label>
+                <input type="number" id="age" name="age" min=1 required>
+            </li>
+            <li>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" min=1 required>
+            </li>
+            <li>
+                <label>Are you in good health?</label>
+                <div class="radio-group">
+                    <input type="radio" id="health-yes" name="health" value="yes" required>
+                    <label for="health-yes">Yes</label>
+                    <input type="radio" id="health-no" name="health" value="no" required>
+                    <label for="health-no">No</label>
+                </div>
+            </li>
+            <li>
+                <label>Are you currently taking any medications?</label>
+                <div class="radio-group">
+                    <input type="radio" id="medications-yes" name="medications" value="yes" required>
+                    <label for="medications-yes">Yes</label>
+                    <input type="radio" id="medications-no" name="medications" value="no" required>
+                    <label for="medications-no">No</label>
+                </div>
+            </li>
+            <li>
+                <label>Have you had any surgeries recently?</label>
+                <div class="radio-group">
+                    <input type="radio" id="surgery-yes" name="surgery" value="yes" required>
+                    <label for="surgery-yes">Yes</label>
+                    <input type="radio" id="surgery-no" name="surgery" value="no" required>
+                    <label for="surgery-no">No</label>
+                </div>
+            </li>
+            <li>
+                <label>Are you currently pregnant?</label>
+                <div class="radio-group">
+                    <input type="radio" id="pregnancy-yes" name="pregnancy" value="yes" required>
+                    <label for="pregnancy-yes">Yes</label>
+                    <input type="radio" id="pregnancy-no" name="pregnancy" value="no" required>
+                    <label for="pregnancy-no">No</label>
+                </div>
+            </li>
+            <li>
+                <label>Have you had a tattoo or piercing in the last 6 months?</label>
+                <div class="radio-group">
+                    <input type="radio" id="tattoo-yes" name="tattoo" value="yes" required>
+                    <label for="tattoo-yes">Yes</label>
+                    <input type="radio" id="tattoo-no" name="tattoo" value="no" required>
+                    <label for="tattoo-no">No</label>
+                </div>
+            </li>
+            <li>
+                <label>Have you traveled to any malaria-prone areas recently?</label>
+                <div class="radio-group">
+                    <input type="radio" id="travel-yes" name="travel" value="yes" required>
+                    <label for="travel-yes">Yes</label>
+                    <input type="radio" id="travel-no" name="travel" value="no" required>
+                    <label for="travel-no">No</label>
+                </div>
+            </li>
+        </ul>
+        <button type="button" onclick="checkEligibility()">Check Eligibility</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+
+
+
+    <script src="eligibility.js"></script>
+</body>
+</html>
+

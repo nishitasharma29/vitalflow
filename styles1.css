@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color:#286e5d ;
+}
+
+h2 {
+    color:#286e5d;
+}
+
+.our-mission, .our-vision, .our-story, .donor-stories, .our-values.campaign-details, .how-to-help, .registration, .previous-campaigns {
+    margin-bottom: 20px;
+}
+
+.donor-stories {
+    margin-top: 20px;
+}
+
+.story {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.story h3 {
+    color: #286e5d;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #286e5d;
+    text-decoration: none;
+}
+/* search for blood  */
+.search-blood{
+    text-align: center;
+}
+#search,#results {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    max-width: 400px;
+  }
+  
+  h4 {
+    margin-bottom: 10px;
+  }
+  
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: calc(100% - 150px); /* Responsive width */
+    font-size: 1em; /* Consistent font size */
+  }
+  
+  .cta-button {
+    background:#286e5d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em; /* Consistent font size */
+    transition: background 0.3s; /* Smooth transition */
+  }
+  
+  .cta-button:hover {
+    background: #43a88e; /* Darker shade on hover */
+  }
+  
+  #results {
+    margin-top: 20px;
+  }
+  
+  #blood-bank-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #blood-bank-list li {
+    background: rgb(236, 236, 236);
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s; /* Smooth transition for hover effect */
+  }
+  /* WHY DONATE BLOOD? */
+  

@@ -1,0 +1,123 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 20px;
+}
+
+/* Content section styling */
+.content-section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Center the main heading */
+h1 {
+    font-size: 30px;
+    color: #286e5d;
+    text-align: center;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Table styling for eligibility criteria */
+.eligibility-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.eligibility-table th, 
+.eligibility-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.eligibility-table th {
+    background-color: #286e5d;
+    color: white;
+}
+
+.eligibility-table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Make criteria names red and bold */
+.eligibility-table td:first-child {
+    color: #9e3030; /* Red color for criteria names */
+    font-weight: bold; /* Bold text for criteria names */
+}
+
+/* Form box styling */
+.form-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the form section heading */
+.form-box h2 {
+    color: #286e5d;
+    text-align: center;
+}
+
+/* Form list styling */
+.form-list {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 20px; /* Indent list */
+}
+
+.form-list li {
+    margin-bottom: 15px;
+}
+
+/* Style for radio button group */
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="number"] {
+    width: 200px; /* Adjusted width for input fields */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff4b3e;
+}
+
+/* Result text styling */
+#result {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #c52323;
+}
+

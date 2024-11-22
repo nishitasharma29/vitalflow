@@ -1,0 +1,398 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3fad92; /* Sky Blue for navbar background */
+  padding: 10px 20px;
+  color: #ffffff; /* White text */
+  font-size: 1em;
+}
+
+.logo {
+  color: #ffffff; /* White text for logo */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff; /* White text for links */
+  padding: 14px 20px;
+  text-decoration: none;
+  display: block;
+  border-radius: 15px;
+}
+
+.nav-links a:hover {
+  background-color: #286e5d;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* White background for dropdown */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #333333; /* Dark Gray text in dropdown */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f4f4f4; /* Light Gray on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  color: #ffffff; /* White text for dropdown button */
+  padding: 14px 20px;
+  text-decoration: none;
+  background-color: #3fad92; /* Sky Blue for dropdown button */
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.dropbtn:hover {
+  background-color: #286e5d; /* Darker Blue on hover */
+  border-radius: 15px;
+}
+
+.login-join {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.login-join .dropbtn {
+  margin-left: 0;
+}
+
+.primary-button {
+  background-color: #286e5d; /* Darker Blue on hover */
+  color: white; /* Text color */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Fit content */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  font-weight: bolder;
+}
+
+/*-----slideshow--*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+}
+
+.text {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: rgb(145, 25, 25);
+    padding: 10px;
+}
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+
+
+/*----------QuoTE AND IMG------------*/
+.container {
+  display: flex;
+  justify-content:flex-end;
+  align-items: left;
+  width: 100%; /* Adjust the width of the container */
+  max-width: 1200px; /* Ensure it doesn't stretch too far */
+  margin: 0 auto; /* Center the container on the page */
+  padding: 5px;
+  margin-left: 2%;
+  margin-right: 0%;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%; /* Prevent text and button from taking too much space */
+  margin-top: 3%;
+  align-content: normal;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #9e5050;
+  font-size: 1em;
+  
+}
+
+.left-content h1 {
+  margin: 0;
+
+}
+
+.donate-btn {
+  padding: 10px 5px;
+  background: linear-gradient(90deg, rgb(214, 55, 55) 50%, #286e5d 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 25%;
+  transition: background-position 0.5s ease;
+  align-self: center;
+}
+
+.donate-btn:hover {
+  background-position: left bottom;
+}
+
+
+.donate-btn:hover {
+  background-color: #286e5d; 
+}
+
+
+.image {
+  width: 400px;
+  height: 388px;
+  border: 2px solid black;
+}
+
+
+  
+
+
+/*------------6 container--------*/
+.container5 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center all boxes horizontally */
+  padding: 20px;
+}
+
+
+.box {
+  width: 200px; /* Fixed width to maintain consistent sizing */
+  border: 2px solid #5e5151;
+  border-radius: 10px;
+  background-color:#286e5d;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box; /* Include border and padding in the element's total width and height */
+}
+
+/* Ensure the images fit within the boxes */
+.box img {
+  width: 100%;
+  height: 200px;
+}
+
+.box p {
+  padding: 10px;
+  margin: 0;
+  color: white;  
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+
+.container5 .box:nth-child(1),
+.container5 .box:nth-child(2),
+.container5 .box:nth-child(3) {
+    flex-basis: 30%;
+}
+
+/* Ensure that the next 3 boxes are in the bottom row */
+.container5 .box:nth-child(4),
+.container5 .box:nth-child(5),
+.container5 .box:nth-child(6) {
+    flex-basis: 30%;
+}
+
+/*------blood bank-----*/
+.box-container6 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box1 {
+  display: flex;
+  width: 45%; /* Adjust width to fit two boxes per line */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  background-color:#286e5d;
+  border: 2px solid black;
+}
+
+.box1 img {
+  width: 100px; /* Image size */
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.box1 p {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/*--------black section----------*/
+
+.three-part-section {
+  display: flex;
+  background-color: #286e5d; /* Black background */
+  color: white; /* White text */
+  padding: 20px;
+  margin: 10px 0;
+  height: auto; /* Adjust the height as per your layout */
+}
+
+.part1, .part2, .part3 {
+  flex: 1;
+  padding: 20px;
+  text-align: left; /* Align text and content to the left */
+}
+
+.logo-text {
+  display: flex;
+  align-items: center; /* Align logo and text vertically */
+}
+
+.logo {
+  max-width: 50px;
+  margin-right: 10px; /* Spacing between logo and text */
+}
+
+.logo-word {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.part1 p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.part2 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.part2 li {
+  margin: 10px 0;
+}
+
+.part2 a {
+  text-decoration: none;
+  color: #00bfff; /* Blue hyperlink color */
+}
+
+.part3 p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/*---------social media icon---------*/
+.part3 ul
+{
+    position:sticky;
+    top: 80%;
+    left: 70%;
+    transform :translate(-15%,-50%);
+    display:flex;
+    color: black;
+}
+.part3 ul li
+{
+list-style:none;
+margin: 0 15px;
+}
+.part3 ul li .fa-brands
+{
+    font-size: 20px;
+    color:black;
+line-height: 60px;
+transition: .3s;
+}
+.part3 ul li a:hover
+{
+    
+    color:black;
+}
+
+
+
+
+

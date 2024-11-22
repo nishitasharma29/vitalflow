@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Blood Banks - VitalFlow</title>
+    <link rel="stylesheet" href="rouhn.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Find Nearby Blood Banks</h1>
+        </header>
+        <section class="search-section">
+            <form id="searchForm">
+                <label for="location">Enter Your Location:</label>
+                <input type="text" id="location" placeholder="City or Zip Code" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="results" class="results"></div>
+        </section>
+        <section class="map-section">
+            <h2>Map of Nearby Blood Banks</h2>
+            <div id="map" style="height: 400px;"></div>
+        </section>
+    </div>
+
+    <script>
+        let map;
+        let markers = []; // To store map markers
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const location = document.getElementById('location').value.trim().toLowerCase();
+            searchBloodBanks(location);
+        });
+
+        function searchBloodBanks(location) {
+            let bloodBanks = [];
+
+            if (location === "201003") {
+                bloodBanks = [
+                    { name: 'Yashoda Super Speciality Hospital Blood Bank', address: 'Sector 7, Vaishali, Ghaziabad, UP – 201003', lat: 28.6193, lng: 77.2135 },
+                    { name: 'Sanjeevani Blood Bank', address: 'Mohan Nagar, Ghaziabad, UP – 201003', lat: 28.6200, lng: 77.2140 }
+                ];
+            } else if (location === "pitampura") {
+                bloodBanks = [
+                    { name: 'Shree Harikishan Blood Bank', address: 'A-28, Pitampura, New Delhi – 110034', lat: 28.6960, lng: 77.1335 },
+                    { name: 'Saroj Super Speciality Hospital Blood Bank', address: 'Pitampura, Delhi – 110034', lat: 28.6975, lng: 77.1350 }
+                ];
+            } else if (location === "rohini") {
+                bloodBanks = [
+                    { name: 'Rohini Blood Services', address: 'Sector-5, Rohini, Delhi – 110085', lat: 28.7041, lng: 77.0910 }, 
+                    { name: 'Medihope Hospital Blood Bank', address: 'Sector-14, Rohini, Delhi – 110085', lat: 28.7055, lng: 77.0925 }
+                ];
+            } else if (location === "indirapuram") {
+                bloodBanks = [
+                    { name: 'Indirapuram Blood Bank (Fortis Hospital)', address: 'Sector 62, Indirapuram, Ghaziabad, UP – 201014', lat: 28.6013, lng: 77.3438 },
+                    { name: 'Vardan Blood Bank', address: 'Indirapuram, Ghaziabad, UP – 201014', lat: 28.6020, lng: 77.3450 }
+                ];
+            } else if (location === "201010") {
+                bloodBanks = [
+                    { name: 'Ganga Blood Bank', address: 'Indirapuram, Ghaziabad, UP – 201010', lat: 28.6013, lng: 77.3438 },
+                    { name: 'Hemraj Blood Bank', address: 'Kaushambi, Ghaziabad, UP – 201010', lat: 28.6020, lng: 77.3450 },
+                    { name: 'Life Line Blood Bank', address: 'Sector 10, Ghaziabad, UP – 201010', lat: 28.7055, lng: 77.0925 }
+                ];
+            } else {
+                // Display random blood banks if location not recognized
+                const allBloodBanks = [
+                    { name: 'Apollo Blood Bank', lat: 13.0827, lng: 80.2707 },
+                    { name: 'AIIMS Blood Bank', lat: 28.5646, lng: 77.2047 },
+                    { name: 'Fortis Blood Bank', lat: 19.0760, lng: 72.8777 },
+                    { name: 'KEM Hospital Blood Bank', lat: 18.5167, lng: 73.8563 },
+                    { name: 'Narayana Blood Bank', lat: 12.9716, lng: 77.5946 }
+                ];
+
+                while (bloodBanks.length < 4) {
+                    const randomIndex = Math.floor(Math.random() * allBloodBanks.length);
+                    bloodBanks.push(allBloodBanks[randomIndex]);
+                }
+            }
+
+            displayResultsAndMap(bloodBanks, location);
+        }
+
+        function displayResultsAndMap(bloodBanks, location) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h3>Nearby Blood Banks:</h3>';
+
+            bloodBanks.forEach(bank => {
+                resultsDiv.innerHTML += `<p><strong>${bank.name}</strong>${bank.address ? `<br>${bank.address}` : ''}</p>`;
+            });
+
+            // Clear previous markers if any
+            clearMarkers();
+
+            if (!map) {
+                map = L.map('map').setView([bloodBanks[0].lat, bloodBanks[0].lng], 13);
+            } else {
+                map.setView([bloodBanks[0].lat, bloodBanks[0].lng], 13);
+            }
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            // Add new markers
+            bloodBanks.forEach(bank => {
+                const marker = L.marker([bank.lat, bank.lng])
+                    .addTo(map)
+                    .bindPopup(`<strong>${bank.name}</strong>${bank.address ? `<br>${bank.address}` : ''}`);
+                markers.push(marker); // Store markers
+            });
+        }
+
+        function clearMarkers() {
+            markers.forEach(marker => {
+                map.removeLayer(marker); // Remove each marker from the map
+            });
+            markers = []; // Clear the markers array
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Blood Request - VitalFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Emergency Blood Request Form</h2>
+        <form action="/submit-request" method="post">
+            <div class="form-group">
+                <label for="name">Patient's Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" required>
+            </div>
+            <div class="form-group">
+                <label for="blood group">Blood Group:</label>
+                <input type="text" id="blood group" name="blood group" required>
+            </div>
+            <div class="form-group">
+                <label for="Rh type">Rh Type:</label>
+                <input type="text" id="Rh type" name="Rh type" required>
+            </div>
+            <div class="form-group">
+                <label for="units required">Units Required:</label>
+                <input type="text" id="units required" name="units required" required>
+            </div>
+            <div class="form-group">
+                <label for="Urgency Level">Urgency Level(High/Moderate/Low):</label>
+                <input type="text" id="Urgency Level" name="Urgency Level" required>
+            </div>
+            <div class="form-group">
+                <label for="hospital">Hospital's name:</label>
+                <input type="text" id="hospital" name="hospital" required>
+            </div>
+            <div class="form-group">
+                <label for="notes">
+                    <Address>Hospital's Address:</Address>
+                </label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Form </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

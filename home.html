@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css">
+    <title>Blood Bank Management System</title>
+  </head>
+  <body>
+
+
+
+    <!-------navbar--------->
+    <div class="navbar">
+      <img src="logo.png" />
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Donate Blood</button>
+          <div class="dropdown-content">
+            <a href="../priya/sheduleapp.html">Schedule Appointment</a>
+            <a href="../donation center/center.html">Donation Centers</a>
+            <a href="../eligibility/eligibility.html">Donor Eligibility</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Need Blood</button>
+          <div class="dropdown-content">
+            <a href="../priya/searchblood.html">Search for Blood</a>
+            <a href="../priya/nearbybloodcenter.html">Nearby Blood Banks</a>
+            <a href="../priya/bloodrequest.html">Request Blood</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Help & Support</button>
+          <div class="dropdown-content">
+            <a href="../FAQs/faq.html">FAQs</a>
+            <a href="../contact/contact.html">Contact Us</a>
+            <a href="../priya/whydonate.html">Why to donate blood</a>
+          </div>
+        </div>
+        <div>
+          <a href="../priya/aboutus.html">About Us</a>
+        </div>
+          <div>
+          <a href="../templates/join.html" class="primary-button">Join Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!--slideshow-->
+<div class="slideshow-container">
+  <div class="slide fade">
+      <div class="text"><b>Your gift of blood <br>can give someone<br> another chance at life...</b></div>
+      <img src="img 1.png" alt="Image 1">
+  </div>
+  <div class="slide fade">
+      <img src="img 2.jpg" alt="Image 2">
+  </div>
+  <div class="slide fade">
+      <img src="img 3.jpg" alt="Image 3">
+  </div>
+</div>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex - 1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+</script>
+
+
+<br><br><br>
+<!--------quote and img with donate now button-->
+<div class="container">
+  <div class="left-content">
+      <h2>Blood donation is not just about giving—it's about making a lasting impact. 
+        Every donation provides hope and a second chance at life for accident victims, 
+        surgical patients, and those battling severe illnesses. It's a simple, safe, and
+         rewarding way to contribute to your community. With each donation, you're not only
+          replenishing the blood supply but also ensuring that hospitals and clinics are better
+           prepared for emergencies. Your contribution can bring comfort to families and help save 
+           lives, creating a ripple of positive change.</h2>
+      <button class="donate-btn"> <a href="../priya/sheduleapp.html">DONATE NOW</a></button>
+  </div>
+  <div class="right-content">
+      <img src="blood chart.png" alt="Support Image" class="image">
+  </div>
+</div>
+<br><br><br>
+
+
+
+<!------6 container-->
+<div class="container5">
+  <div class="box" onclick="navigate('../checker/checker.html')">
+      <img src="con1.png" alt="Photo 1">
+      <p>Blood Compatibility Checker</p>
+  </div>
+  <div class="box" onclick="navigate('../priya/searchblood.html')">
+      <img src="con2.png" alt="Photo 2">
+      <p>Search Blood Avaibility</p>
+  </div>
+  <div class="box" onclick="navigate('../priya/bloodrequest.html')">
+      <img src="con3.png" alt="Photo 3">
+      <p>Emergency Blood Request</p>
+  </div>
+  <div class="box" onclick="navigate('../priya/bloodcampaign.html')">
+      <img src="con4.png" alt="Photo 4">
+      <p>Donation Campaign</p>
+  </div>
+  <div class="box" onclick="navigate('../donation center/center.html')">
+      <img src="con5.png" alt="Photo 5">
+      <p>Donation Centers</p>
+  </div>
+  <div class="box" onclick="navigate('../feedback/feedback.html')">
+    <img src="con6.png" alt="Photo 6">
+    <p>Feedback Form</p>
+</div>
+</div>
+<script>
+  function navigate(page) {
+      window.location.href = page;
+  }
+</script>
+
+<br><Br><BR>
+
+<center>
+<u><h1>Blood Banks</h1></u>
+<h3>More than 45 Blood Banks are using VitalFlow Application</h3>
+</center>
+<div class="box-container6">
+  <div class="box1">
+      <img src="logo1.png" alt="Image 1">
+      <p>BHARAT SEWA CHARITABLE BLOOD CENTRE,Loni</p>
+  </div>
+  <div class="box1">
+      <img src="logo2.png" alt="Image 2">
+      <p>NOIDA CHARITABLE BLOOD BANK,Noida</p>
+  </div>
+  <div class="box1">
+      <img src="logo3.png" alt="Image 3">
+      <p>SAMARPAN BLOOD BANK,Agra</p>
+  </div>
+  <div class="box1">
+      <img src="logo4.png" alt="Image 4">
+      <p>AWADH CHARITABLE BLOOD BANK,Lucknow</p>
+  </div>
+  <div class="box1">
+      <img src="logo5.png" alt="Image 5">
+      <p>UNITED BLOOD BANK,Jhansi</p>
+  </div>
+  <div class="box1">
+      <img src="logo6.png" alt="Image 6">
+      <p>LAXMI CHARITABLE BLOOD BANK,Firozabad</p>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<!-------black section----->
+<div class="three-part-section">
+  <div class="part1">
+      <div class="logo-text">
+          <img src="logo_a.png" alt="Logo" class="logo">
+          <span class="logo-word">VitalFlow</span> <!-- Word next to logo -->
+      </div>
+      <b><p><font color="black">is an innovative online platform that acts as an intermediary between customers 
+        and blood banks. Designed to bridge the gap, VitalFlow simplifies the process of finding,
+         requesting, and donating blood. It provides real-time access to blood bank inventories and
+          ensures efficient communication between donors, recipients, and blood banks, making the 
+          process of saving lives more accessible and reliable.</font></p></b>
+  </div>
+  <div class="part2">
+    <h2>Information</h2>
+      <ul>
+          <li><a href="../home page/home.html" style="color: black; font-weight: bold;">Home</a></li>
+          <li><a href="../priya/whydonate.html" style="color: black; font-weight: bold;">Donate Blood</a></li>
+          <li><a href="../priya/bloodrequest.html" style="color: black; font-weight: bold;">Schedule Appointment</a></li>
+          <li><a href="../priya/bloodrequest.html" style="color: black; font-weight: bold;">Request Blood</a></li>
+          <li><a href="../feedback/feedback.html" style="color: black; font-weight: bold;">Submit Feedback</a></li>
+          <li><a href="../priya/searchblood.html" style="color: black; font-weight: bold;">Search Blood Avaibility</a></li>
+          <li><a href="../checker/checker.html" style="color: black; font-weight: bold;">Blood Compatibility Checker</a></li>
+      </ul>
+  </div>
+  <div class="part3">
+    <h2>Contact Us</h2>
+    <b><font color="black"><p>9867 0202 1987 <br>1010 2030 4939</p> <br><b> info@vitalflow.org</font color></b>
+
+    <br><br><br>
+    <h2>Social Media Profiles</h2>  
+    <ul>
+      <li><a href="#" target="blank"> <i class="fa-brands fa-whatsapp"></i></a> </li>
+      <li><a href="#" target="blank"> <i class="fa-brands fa-instagram"></i></a> </li>
+      <li><a href="#" target="blank"> <i class="fa-brands fa-facebook"></i></a> </li>
+      <li><a href="#" target="blank"> <i class="fa-brands fa-github"></i></a> </li>
+      <li><a href="#" target="blank"> <i class="fa-brands fa-linkedin"></i></a> </li>
+      <li><a href="#" target="blank"> <i class="fa-brands fa-twitter"></i></a> </li>
+
+  </ul>
+<script src="https://kit.fontawesome.com/de91a2fb51.js" crossorigin="anonymous"></script>
+
+  </div>   
+  </div>
+  
+
+  </body>
+</html>

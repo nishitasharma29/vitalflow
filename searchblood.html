@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Blood Bank - VitalFlow </title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+        <h1 class="search-blood">Find Your Nearest Blood Bank</h1>
+
+        <h2 class="search-blood">Search for Blood Groups</h2>
+    <section id="search">
+        <form id="blood-search-form">
+           <h4>Select Blood Group:</h4> 
+            <select id="blood-group">
+                <option value="">--Select--</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+            <button type="submit" class="cta-button">Search</button>
+        </form>
+    </section>
+
+    <section id="results" style="display: none;">
+        <h2>Results</h2>
+        <ul id="blood-bank-list"></ul>
+    </section>
+
+    
+
+    <script>
+        const bloodBankData = {
+            "A+": ["City Blood Bank - 123 Main St", "Downtown Blood Center - 456 Park Ave"],
+            "B+": ["Westside Blood Bank - 789 Elm St"],
+            "O+": ["North Blood Center - 321 Oak St", "Eastside Blood Donation - 654 Pine St"],
+            // Add more blood groups and their corresponding blood banks
+        };
+
+        document.getElementById('blood-search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedGroup = document.getElementById('blood-group').value;
+            const resultsSection = document.getElementById('results');
+            const bloodBankList = document.getElementById('blood-bank-list');
+            bloodBankList.innerHTML = ''; // Clear previous results
+
+            if (selectedGroup && bloodBankData[selectedGroup]) {
+                bloodBankData[selectedGroup].forEach(bank => {
+                    const li = document.createElement('li');
+                    li.textContent = bank;
+                    bloodBankList.appendChild(li);
+                });
+                resultsSection.style.display = 'block';
+            } else {
+                alert('No blood banks found for this blood group.');
+                resultsSection.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
